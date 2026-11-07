@@ -1,0 +1,18 @@
+{
+  "name": "monolife",
+  "version": "1.0.0",
+  "description": "Monolife - pengelola keuangan dan target harian (hitam putih, offline-ready)",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "dev:front": "npm run dev --prefix frontend",
+    "dev:back": "npm run dev --prefix backend",
+    "dev": "concurrently -c \"cyan,magenta\" \"npm run dev:front\" \"npm run dev:back\"",
+    "build": "npm run build --prefix frontend",
+    "start": "npm run start --prefix backend"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}
